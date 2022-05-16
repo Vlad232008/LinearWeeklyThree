@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.SeekBar
@@ -35,7 +36,10 @@ class PlayActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val startTime = System.nanoTime()
         setContentView(R.layout.activity_play)
+        val totalTime = System.nanoTime() - startTime
+        Log.d("MyLog", "Отрисовка плеера: $totalTime")
         actionBarSetting()
         title = "Сейчас играет"
         seekBar.min = 0

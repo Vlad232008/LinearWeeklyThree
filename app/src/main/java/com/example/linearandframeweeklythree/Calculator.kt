@@ -2,6 +2,7 @@ package com.example.linearandframeweeklythree
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import com.example.linearandframeweeklythree.R
 
@@ -9,7 +10,10 @@ class Calculator : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_ActivityThree)
         super.onCreate(savedInstanceState)
+        val startTime = System.nanoTime()
         setContentView(R.layout.activity_calculator)
+        val totalTime = System.nanoTime() - startTime
+        Log.d("MyLog", "Отрисовка калькулятора: $totalTime")
         actionBarSetting()
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -22,4 +22,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, BeginActivity::class.java))
         }
     }
+    /*
+    D/MyLog: Отрисовка плеера: 128024693
+    D/MyLog: Отрисовка контакта телеграмма: 122444154
+    D/MyLog: Отрисовка калькулятора: 109064847
+    D/MyLog: Отрисовка входа: 81490308
+    */
 }
